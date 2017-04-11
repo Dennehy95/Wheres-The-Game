@@ -1,0 +1,789 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+@font-face {
+  font-family: Simplifica;
+  src: local("Simplifica"),
+       url(SIMPLIFICATypeface.ttf);
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-alight:center;
+}
+
+.ui-header.ui-bar-b{
+ height: 41px;	
+}
+
+/*************** 		Panel Styling 		***************/
+.panelTitle {
+	margin: 0;
+}
+
+#panelButton {
+	padding: 15px 17px 15px 15px;
+    margin: 5px 5px 0px 5px;
+}
+
+#closePanelButton {
+	float: right;
+	margin: 5px 0 0 0;
+	background-color: #e9e9e9;
+    border-color: #e9e9e9;
+    color: #333;
+    text-shadow: 0 1px 0 #f3f3f3;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 0px 0px rgba(0,0,0,.15);
+    box-shadow: 0 0px 0px rgba(0,0,0,.15);
+}
+
+#createProfileInput{
+	margin: 0;
+}
+
+/*************** 		Header Bar Styling		***************/
+#titleBlock {
+	/*min-width: 30%;
+	width: 33.33%;
+	max-width: 40%;*/
+}
+
+#homeTitle {
+	text-overflow: initial;
+	overflow: visible;
+}
+
+#profileBlock {
+	/*min-width: 30%;
+	max-width: 40%;*/
+}
+
+#profileTitle {
+	overflow: visible;
+	margin: 0;
+}
+
+#optionsPanel {
+	background-color: #e9e9e9;
+	padding: 0;
+}
+/* Inside matches list*/
+.homeIcon{
+	padding: 16px;
+}
+
+#sportName{
+	text-transform:capitalize;
+	margin: 0 0% 0 30%;
+    text-align: left;
+}
+
+/***************		Sport Filter Input		 ***************/
+.sportFilter .ui-input-search.ui-body-inherit.ui-corner-all.ui-shadow-inset.ui-input-has-clear{
+    margin: 0;
+	-webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+/*************** 		Styling for headings		***************/
+h3.dateFilterHeading,
+h3.dateFilterHeadingMulti{
+	background-color: #333333;
+	margin: 0;
+	text-align: center;
+}
+.dateFilterHeading.ui-block-b{
+	color: #67e2bc;
+	font-family: "Simplifica", sans-serif;
+	font-size: 1.2em;
+	min-height: 46px;
+    max-height: 46px;
+	text-shadow: none;
+	width: 67%;
+	padding: 5px 0 0 0;
+	overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+	word-wrap: normal;
+    white-space: nowrap;
+}
+
+h3.favNoProfileHeader{
+	background-color: #333333;
+	color: #67e2bc;
+	font-family: "Simplifica", sans-serif;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 5px 0 5px 10px;
+	text-align: center;
+	text-shadow: none;	
+}
+a.favNoProfileLink{
+	text-decoration: none;
+}
+
+h3.favouritesHeader,
+h3.moreSportsHeader,
+h3.favouritesFilterHeader{
+	background-color: #333333;
+	margin: 0;
+	padding: 5px 0 5px 0;
+	font-family: "Simplifica", sans-serif;
+	text-shadow: none;
+	font-size: 1.7em;
+	color: #67e2bc;
+	text-align: center;
+}
+
+h3.favouritesHeader-channels{
+	background-color: #333333;
+	color: #6cf3c9;
+	font-family: "Simplifica", sans-serif;
+	font-size: 1.3em;
+	margin: 0;
+	padding: 5px 0 5px 0;
+	letter-spacing: 1px;
+	text-shadow: none;
+	text-align: center;
+}
+
+h3.noMatchesHeader{
+	background-color: #00b277;
+	text-align: center;
+	text-shadow: none;
+	margin: 0;
+}
+
+/***************		Sport list options stylings		 ***************/
+.ui-listview.listOfSports {
+	text-transform:capitalize;
+	margin: 0; 
+	box-shadow: 0 3px 1px 3px rgba(0,0,0,1);
+}
+
+.sportOptions{
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+	border-left: 5px solid 	#1d1d1d;
+}
+
+.sportsList.normal {
+    background-color: #00b277;
+	border-color: #00b277;
+	text-shadow: none;
+}
+
+.sportsList.alternate{
+    background-color: #14c48a;
+	border-color: #14c48a;
+	text-shadow: none;
+	color: #00b277;
+    //font-family: Helvetica, sans-serif;
+}
+
+.sportsList.alternate.isFavourite{
+    background-color: #fed700;
+	border-color: #fed700;
+	text-shadow: none;
+	color: #00b277;
+    //font-family: Helvetica, sans-serif;
+}
+
+.sportsList.normal.isFavourite{
+    background-color: #d8b600;
+	border-color: #d8b600;
+	text-shadow: none;
+	color: #00b277;
+    //font-family: Helvetica, sans-serif;
+}
+
+.sportsList.channelFav.isFavourite{
+    background-color: #fed700;
+	border-color: #fed700;
+	text-shadow: none;
+	color: #00b277;
+    //font-family: Helvetica, sans-serif;
+}
+
+
+.sportsList.alternate.ui-li-static.ui-body-inherit,
+.sportsList.normal.ui-li-static.ui-body-inherit{
+	padding: 0;
+	//border-bottom: 1px solid;
+	-webkit-border-top-right-radius: initial;
+    border-top-right-radius: initial;
+    -webkit-border-top-left-radius: initial;
+    border-top-left-radius: initial;
+	-webkit-border-bottom-right-radius: initial;
+    border-bottom-right-radius: initial;
+    -webkit-border-bottom-left-radius: initial;
+    border-bottom-left-radius: initial;
+}
+
+.favouriteSportBlock.ui-block-a{
+	width: 10%;
+}
+
+.sportsListLinkBlock.ui-block-b{
+	width: 80%;
+	white-space: normal;
+	text-align: center;
+}
+
+.sportsListArrowLinkBlock.ui-block-c{
+	width: 10%;
+	float: right;
+}
+
+.favouriteSport.ui-btn.ui-icon-star.ui-btn-icon-left,
+.favouriteSport.ui-btn.ui-icon-minus.ui-btn-icon-left,
+.sportsListArrowLink.ui-btn.ui-icon-carat-r.ui-btn-icon-right{
+	background-color: rgba(255,0,0,0);
+	border: none;
+	margin: 0;
+	padding: 23px;
+	white-space: inherit;
+	position: static;
+}
+
+.sportsListLink.ui-btn{
+	background-color: rgba(255,0,0,0);
+	border: none;
+	font-size: .9em;
+	margin: 0;
+	position: static;
+	text-shadow: none;
+	white-space: inherit;
+	word-wrap: normal;
+}
+
+.sportsListLink.ui-btn:active,
+.sportsListLink.ui-btn:hover{
+	background-color: rgba(255,0,0,0);
+	border: none;
+	margin: 0;
+}
+
+.ui-listview>li h3.sportName{
+	margin: 0;
+}
+
+#datepickerInput,
+#datepickerInputMulti{
+	width: 0;
+	height: 0;
+}
+
+#date,
+#dateMulti{
+	visibility: hidden;
+}
+
+.removeFavouriteDate.ui-btn.ui-icon-delete.ui-btn-icon-left,
+.dateFilter.ui-btn.ui-icon-calendar.ui-btn-icon-right{
+	background-color: rgba(255,0,0,0);
+	border: none;
+    padding: 23px;
+	margin: 0;
+}
+
+#sportNameMulti{
+	text-transform:capitalize;
+}
+
+#dailyMatchHeading,
+#dailyEventHeading{
+	margin: 0;
+}
+
+/****************** Matches list ********************/
+
+/* Two team and multi */
+
+.teamsFilterLinkBlock,
+.eventsFilterLinkBlock{
+	background-color: #14c48a;
+	border-color: #14c48a;
+}
+
+.teamsFilterLink.ui-btn,
+.eventsFilterLink.ui-btn,
+.teamsFilterLink.ui-btn:hover,
+.eventsFilterLink.ui-btn:hover,
+.compsFilterLink.ui-btn,
+.compsFilterLink.ui-btn:hover,
+.channelsFilterLink.ui-btn,
+.channelsFilterLink.ui-btn:hover{
+	background-color: rgba(255,0,0,0);
+	border: none;
+	margin: 0;
+	padding: 0;
+	position: static;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-shadow: none;
+	white-space: inherit;
+}
+
+.teamsFilterLink.ui-btn.header,
+.eventsFilterLink.ui-btn.header,
+.teamsFilterLink.ui-btn:hover.header,
+.eventsFilterLink.ui-btn:hover.header,
+.compsFilterLink.ui-btn.header,
+.compsFilterLink.ui-btn:hover.header,
+.channelsFilterLink.ui-btn.header,
+.channelsFilterLink.ui-btn:hover.header{
+	background-color: #333333;     
+	border-radius: 0 0 10px 10px;
+	color: #67e2bc;
+	font-size: .75em;
+}
+
+.teamsFilterLink.ui-btn.text,
+.eventsFilterLink.ui-btn.text,
+.teamsFilterLink.ui-btn:hover.text,
+.eventsFilterLink.ui-btn:hover.text,
+.compsFilterLink.ui-btn.text,
+.compsFilterLink.ui-btn:hover.text,
+.channelsFilterLink.ui-btn.text,
+.channelsFilterLink.ui-btn:hover.text{
+	font-size: .9em;
+	height: 60px;
+}
+
+.compsFilterLinkBlock{
+	background-color: #00b277;
+	border-color: #00b277;
+}
+
+.channelsFilterLinkBlock{
+	background-color: #14c48a;
+	border-color: #14c48a;
+	text-align: right;
+    //font-family: Helvetica, sans-serif;
+}
+
+.removeFavourite.ui-btn.ui-icon-delete.ui-btn-icon-left{
+	background-color: rgba(255,0,0,0);
+	border: none;
+    padding: 20%;
+	margin: 0;
+}
+
+.removeFavouriteOutside.ui-btn.ui-icon-delete.ui-btn-icon-left{
+	background-color: rgba(255,0,0,0);
+	border: none;
+    padding: 20%;
+	margin: 0 auto;
+}
+
+.removeFavouriteOutside.ui-btn.ui-icon-delete.ui-btn-icon-left::after{
+	left: 40%;
+}
+
+.matchDay.ui-block-a{
+	width: 35%;
+	text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.matchMonth.ui-block-b{
+	width: 65%;
+	text-align: right;
+}
+
+.favouriteMatch.ui-btn.ui-icon-star.ui-btn-icon-left,
+.favouriteEvent.ui-btn.ui-icon-star.ui-btn-icon-left{
+	background-color: rgba(255,0,0,0);
+	border: none;
+	margin: 0;
+	padding: 23px;
+	white-space: inherit;
+	position: static;
+}
+
+.favouriteMatch-noProfile.ui-btn.ui-icon-star.ui-btn-icon-left,
+.favouriteEvent-noProfile.ui-btn.ui-icon-star.ui-btn-icon-left{
+	visibility: hidden;
+}
+
+
+.matchListTVIcon.ui-btn.ui-icon-video.ui-btn-icon-right{
+	background-color: rgba(255,0,0,0);
+	border: none;
+	margin: 0;
+	padding: 30px;
+	white-space: inherit;
+	position: static;
+}
+
+.favouriteMatchBlock.ui-block-a,
+.favouriteEventBlock.ui-block-a{
+	width: 10%;
+}
+
+.matchListInfoBlock.ui-block-b,
+.eventListInfoBlock.ui-block-b,
+.favListInfoBlock.ui-block-a{
+	width: 74%;
+	white-space: normal;
+}
+
+.matchListTVIconBlock.ui-block-c,
+.eventListTVIconBlock.ui-block-c{
+	width: 16%;
+	padding: 7% 0 0 0;
+}
+
+.matchListComp,
+.eventListComp{
+    background-color: #333333;
+	border-radius: 0 0 0 0;
+	color: #63f9cb;
+	font-family: "Simplifica", sans-serif;
+	font-size: 20px;
+	margin: 0px 0 -1px 0;
+	letter-spacing: 1px;
+	text-shadow: none;
+}
+
+.matchListTime,
+.eventListTime{
+	background-color: #333333;
+	border-radius: 0 0 20px 20px;
+	color: #63f9cb;
+	font-family: "Simplifica", sans-serif;
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-shadow: none;
+}
+
+.matchesHeader{
+	background-color: #333333;
+	margin: 0 0 -1px 0;
+	padding: 5px 0 5px 0;
+	font-family: "Simplifica", sans-serif;
+	text-shadow: none;
+	font-size: 1.5em;
+	color: #67e2bc;
+	text-align: center;
+}
+
+.channelFav{
+	display: block;
+}
+
+.channelList.normal {
+    background-color: #00b277;
+	text-shadow: none;
+}
+
+.channelList.alternate{
+    background-color: #14c48a;
+	text-shadow: none;
+    //font-family: Helvetica, sans-serif;
+}
+
+/* Just two team */
+.twoTeamSports{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.twoTeamMatches.normal {
+    background-color: #00b277;
+	border-width: 0px 0 0;
+	margin: -2px 0px 0px 0px;
+	padding: 0;
+	text-align: center;
+	text-shadow: none;
+    //position: relative;
+}
+
+.twoTeamMatches.alternate {
+    background-color: #14c48a;
+	border-width: 0px 0 0;
+	margin: -2px 0px 0px 0px;
+	padding: 0;
+	text-align: center;
+	text-shadow: none;
+    //position: relative;
+    //font-family: Helvetica, sans-serif;
+}
+
+.ui-content ul.matchList {
+    list-style-type: none;
+    color: black;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+	margin: 0px -1px 0 -1px;
+    padding: 0;
+	position: relative;
+}
+
+#twoTeamFavPopup,
+#multiTeamFavPopup,
+#twoTeamChannelPopup,
+#multiTeamChannelPopup{
+	border-color: #333;
+	border-style: solid;
+	border-width: 3px;
+}
+#twoTeamFavPopup-popup,
+#multiTeamFavPopup-popup,
+#twoTeamChannelPopup-popup,
+#multiTeamChannelPopup-popup{
+	left: 10%;
+    min-width: 80%;
+}
+
+.homeFav,
+.awayFav,
+.compFav{
+	display: block;
+}
+
+.favText{
+	background-color: rgba(255,0,0,0);
+    border: none;
+	color: #333;
+    font-size: .9em;
+    margin: 0;
+    position: static;
+    text-shadow: none;
+    white-space: inherit;
+    word-wrap: normal;
+}
+
+.favText.ui-block-a{
+    margin: 4% -2% 0px 2%;
+	width: 80%;
+}
+
+.teamFavIcon.ui-block-b,
+.compFavIcon.ui-block-b,
+.channelFavIcon.ui-block-b{
+	width: 20%;
+}
+
+.channelFavIcon.ui-block-b.noProfile{
+	width: 20%;
+	visibility: hidden;
+}
+
+.teamFavIcon.ui-btn.ui-icon-star.ui-btn-icon-right,
+.compFavIcon.ui-btn.ui-icon-star.ui-btn-icon-right,
+.teamFavIcon.ui-btn.ui-icon-minus.ui-btn-icon-right,
+.compFavIcon.ui-btn.ui-icon-minus.ui-btn-icon-right,
+.channelFavIcon.ui-btn.ui-icon-minus.ui-btn-icon-right,
+.channelFavIcon.ui-btn.ui-icon-minus.ui-btn-icon-right{
+	background-color: rgba(255,0,0,0);
+	border: none;
+	margin: 0;
+	padding: 23px;
+	white-space: inherit;
+}
+
+
+/* Just Multi team */
+.multiTeamSports{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.multiTeamMatches.normal {
+    background-color: #00b277;
+	border-width: 0px 0 0;
+	margin: -2px 0px 0px 0px;
+	padding: 0;
+	text-align: center;
+	text-shadow: none;
+    //position: relative;
+}
+
+.multiTeamMatches.alternate {
+    background-color: #14c48a;
+	border-width: 0px 0 0;
+	margin: -2px 0px 0px 0px;
+	padding: 0;
+	text-align: center;
+	text-shadow: none;
+    //position: relative;
+    //font-family: Helvetica, sans-serif;
+}
+
+/***************		Filter favourites styling	  ***************/
+
+#favTeamsFilterPopup,
+#favCompFilterPopup,
+#favEventsFilterPopup,
+#favLocationsFilterPopup,
+#favTwoChannelFilterPopup,
+#favMultiChannelFilterPopup{
+	border-color: #333;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#favTeamsFilterPopup-popup,
+#favCompFilterPopup-popup,
+#favEventsFilterPopup-popup,
+#favLocationsFilterPopup-popup,
+#favTwoChannelFilterPopup-popup,
+#favMultiChannelFilterPopup-popup{
+	left: 10%;
+    min-width: 80%;
+}
+
+.removeFavouriteFilterBlock.ui-block-a{
+	width: 18%;
+	background-color: rgba(51, 51, 51, 0.54);
+}
+.favouriteFilterBlock.ui-block-b{
+	width: 67%;
+	min-height: 46px;
+	max-height: 46px;
+}
+.favouriteFilterBlock.ui-block-c{
+	width: 15%;
+}
+
+.favText.favTextFilter.ui-block-a{
+    margin: 4% -2% 0px 2%;
+	max-height: 38px;
+	overflow: hidden;
+	text-align: center;
+	text-overflow: ellipsis;
+    width: 80%;
+}
+
+.favTeamListFilter.ui-btn.ui-icon-search.ui-btn-icon-right,
+.removeFavourite.ui-btn.ui-icon-delete.ui-btn-icon-left.ui-block-a{
+	background-color: rgba(255,0,0,0);
+	border: none;
+	margin: 0;
+	padding: 23px;
+	white-space: inherit;
+	position: static;
+}
+
+.favTeamListFilter.ui-block-b.ui-btn.ui-icon-search.ui-btn-icon-right{
+	width: 20%;
+}
+
+.favTeamList.normal {
+    background-color: #00b277;
+	border-color: #00b277;
+	text-shadow: none;
+}
+
+.favTeamList.alternate{
+    background-color: #14c48a;
+	border-color: #14c48a;
+	text-shadow: none;
+	color: #00b277;
+}
+
+.favTeamList.alternate.ui-li-static.ui-body-inherit,
+.favTeamList.normal.ui-li-static.ui-body-inherit{
+	padding: 0;
+	//border-bottom: 1px solid;
+	-webkit-border-top-right-radius: initial;
+    border-top-right-radius: initial;
+    -webkit-border-top-left-radius: initial;
+    border-top-left-radius: initial;
+	-webkit-border-bottom-right-radius: initial;
+    border-bottom-right-radius: initial;
+    -webkit-border-bottom-left-radius: initial;
+    border-bottom-left-radius: initial;
+}
+
+
+
+/***************	Scroll to top feature ***************/
+
+.scrollToTop{
+	width:40px; 
+	height:80px;
+	padding:10px; 
+	text-align:center; 
+	background: whiteSmoke;
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+	top:75px;
+	right:40px;
+	display:none;
+	//background: url('arrow_up.png') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+	text-decoration:none;
+}
+
+
+#profileName {
+    text-align: right;
+    padding-right: 10px;
+    color: lightblue;
+}
+
+/***************	Jquery Overrides	***************/
+
+.ui-header,
+.ui-footer{
+	border-width: 0 0;
+}
+
+.ui-collapsible.ui-li-static{
+	padding: 0;
+}
+
+.ui-listview > li .ui-collapsible-heading {
+	margin: 0;
+}
+
+.ui-collapsible-themed-content .ui-collapsible-content {
+	padding: 0;
+}
+
+.ui-header .ui-title {
+	font-size: .85em;
+}
+
+.ui-collapsible-heading.ui-collapsible-heading-collapsed{
+	margin: 0 0 -1px 0;
+}
+
+.ui-li {
+    margin-bottom: -1px !important;
+}
+.ui-input-text{
+	margin: 0;
+	border: 0;
+}
