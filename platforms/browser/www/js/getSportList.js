@@ -133,6 +133,7 @@ function getListOfSports(){
 			$('#favouriteSportsList li:nth-child(even)').addClass('normal');
 			$('#favouriteSportsList li:nth-child(odd)').addClass('alternate');
 		});
+		$.LoadingOverlay("hide");
 		$.mobile.changePage("#Page1", {transition:"pop"});
 	}
 	else{
@@ -141,6 +142,7 @@ function getListOfSports(){
 		$("#sportsList").append(
 			"<h3 class='favouritesHeader'>You must have an internet connection to retrieve sport lists</h3>"
 		);
+		$.LoadingOverlay("hide");
 		$.mobile.changePage("#Page1", {transition:"pop"});
 	}
 }

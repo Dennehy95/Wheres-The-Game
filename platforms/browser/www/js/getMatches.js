@@ -21,6 +21,7 @@ function onDeviceReady() {*/
 	
 	function getTwoTeamMatches(sportName){
 		//var url="http://127.0.0.1:/Database/twoTeamMatches.php"; //Local Lab Machine
+		$.LoadingOverlay("show");
 		var url="http://www.dennehyobutternug.eu/twoTeamMatches.php"; //Virtual Server
 		$.getJSON(url, {type: sportName}, function(result){
 			$("#twoTeamMatches").html("");
@@ -153,12 +154,14 @@ function onDeviceReady() {*/
 			}
 		$("#sportName").append(sportNameShow);
 		$.mobile.changePage("#page2", {transition:"slide"});
+		$.LoadingOverlay("hide");
 		});
 	}
 
 	function getMultiTeamMatches(sportName){
 		//var url="http://127.0.0.1:/Database/twoTeamMatches.php";
 		var url="http://www.dennehyobutternug.eu/twoTeamMatches.php";
+		$.LoadingOverlay("show");
 		$.getJSON(url, {type: sportName}, function(result){
 			$("#multiTeamMatches").html("");
 			$("#sportNameMulti").html("");
@@ -288,7 +291,8 @@ function onDeviceReady() {*/
 				}
 			}
 			$("#sportNameMulti").append(sportNameShow);
+			$.mobile.changePage("#page3", {transition:"slide"});
+			$.LoadingOverlay("hide");
 		});
-		$.mobile.changePage("#page3", {transition:"slide"});
 	}
 //}
