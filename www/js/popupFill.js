@@ -93,7 +93,6 @@ function fillMultiTeamFavPopup(comp,event,game,sportName){
 	var changeGame = 'game';
 	/*		There is fav events for this sport		*/
 	if(favEvents !== null){
-		console.log(favEvents.indexOf(comp));
 		var favEventsJson = favEvents.split(',');
 		if (favEventsJson.indexOf(comp) !== -1) {
 			var compIsMember = true;
@@ -111,7 +110,6 @@ function fillMultiTeamFavPopup(comp,event,game,sportName){
 			var eventClass = 'sportsList normal awayFav isFavourite ui-grid-a';
 		}
 		else{
-			console.log('away not member');
 			var eventIsMember = false;
 			var eventFavIcon = 'teamFavIcon ui-btn ui-icon-star ui-btn-icon-right';
 			var eventClass = 'sportsList normal awayFav ui-grid-a';
